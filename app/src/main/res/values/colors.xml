@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Standard Android Colors -->
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFF</color>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+
+    <!-- KrishiAI Custom Colors -->
+    <color name="green_deep">#1B4332</color>
+    <color name="green_main">#2D6A4F</color>
+    <color name="green_light">#74C69D</color>
+    <color name="green_pale">#D8F3DC</color>
+    <color name="light_gray">#F0F0F0</color>
+    <color name="primary_green">#2E7D32</color>
+    <color name="gray">#9E9E9E</color>
+
+    <!-- Additional Required Colors (ADDED) -->
+    <color name="background_color">#F5F5F5</color>
+    <color name="card_background">#FFFFFF</color>
+    <color name="dark_green">#1B5E20</color>
+    <color name="light_green">#4CAF50</color>
+    <color name="accent_color">#FF6F00</color>
+</resources>

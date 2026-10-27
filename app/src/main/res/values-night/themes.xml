@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.KrishiAI" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">#2D6A4F</item>
+        <item name="colorPrimaryVariant">#1B4332</item>
+        <item name="colorOnPrimary">#FFFFFF</item>
+        <item name="colorSecondary">#74C69D</item>
+        <item name="colorOnSecondary">#1B4332</item>
+        <item name="android:colorBackground">#FEFDF8</item>
+        <item name="android:statusBarColor">#1B4332</item>
+    </style>
+</resources>
