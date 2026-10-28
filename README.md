@@ -1,80 +1,71 @@
-# School Management System (Frontend)
+# KrishiAI: Offline Crop Disease Detection App
 
-React frontend for an AI-powered school management system, built during my AI Engineering internship at Branding Catalyst Pvt. Ltd. It talks to a Node.js + Express backend that uses Groq (LLaMA) for the AI features.
+An Android app that helps farmers identify crop diseases from a photo of a leaf, even without an internet connection. The disease detection model runs on the phone using TensorFlow Lite, so it works in fields with poor or no network.
 
 ## Features
 
-- AI chatbot for school-related questions
-- Automated grading
-- Attendance analysis
-- Student performance prediction
+- Offline crop disease detection using a MobileNetV2 model running through TensorFlow Lite
+- Firebase integration
+- Gemini API integration for AI assistance
+- Available in English, Hindi and Marathi
 
-> Edit this list to match exactly what the app does. Add screens for login, dashboards, etc. if they exist.
+> Edit this list to match exactly what the app does today (for example: scan from camera or gallery, disease details, treatment advice, chat).
 
 ## Tech Stack
 
-| Layer | Technology |
-|-------|------------|
-| Frontend | React |
-| Backend | Node.js, Express |
-| AI | Groq API (LLaMA) |
-| Hosting | Netlify (frontend), Render (backend) |
+| Area | Technology |
+|------|------------|
+| App | Android (Java) |
+| On-device ML | MobileNetV2, TensorFlow Lite |
+| Backend services | Firebase |
+| AI | Gemini API |
+| Languages | English, Hindi, Marathi |
 
 ## Getting Started
 
 ### Prerequisites
 
-- Node.js 18 or later
-- npm
-- The backend running locally or deployed (it provides the API and the AI features)
+- Android Studio (latest stable version)
+- JDK 17 (the one bundled with Android Studio works)
+- An Android phone or emulator running a recent Android version
 
-### Installation
-
-```bash
-git clone https://github.com/shaunak36/shaunak36-school-management-frontend.git
-cd shaunak36-school-management-frontend
-npm install
-```
-
-### Configuration
-
-Create a `.env` file in the project root and set the backend URL. Use the variable name your code actually reads (for example `REACT_APP_API_URL` for Create React App or `VITE_API_URL` for Vite):
-
-```
-REACT_APP_API_URL=http://localhost:5000
-```
-
-Do not put any API keys in the frontend. The Groq key lives only on the backend, and `.env` files are listed in `.gitignore`.
-
-### Run
+### 1. Clone the project
 
 ```bash
-npm start
+git clone https://github.com/shaunak36/Krishi-Ai.git
 ```
 
-Use `npm run dev` instead if the project uses Vite.
+Open the `android_app` folder in Android Studio.
 
-### Build
+### 2. Add your Firebase config
 
-```bash
-npm run build
+1. Create a project in the [Firebase Console](https://console.firebase.google.com) and add an Android app with the package name `com.krishiai.app`.
+2. Download `google-services.json` and place it in the `app/` folder.
+
+This file is ignored by git, so you must add your own.
+
+### 3. Add your Gemini API key
+
+Create an API key in [Google AI Studio](https://aistudio.google.com/apikey), then add it to `local.properties` in the project root:
+
+```
+GOOGLE_API_KEY=your_key_here
 ```
 
-## Project Structure
+`local.properties` is ignored by git. Never commit API keys.
 
-```
-src/
-  components/   Reusable UI components
-  pages/        Application screens
-  services/     API calls to the backend
-```
+### 4. Run
 
-> Adjust this to match your real folder layout.
+Click **Sync Project with Gradle Files**, then **Run** in Android Studio.
 
-## Deployment
+## Security Notes
 
-- Frontend: Netlify
-- Backend: Render
+- API keys and `google-services.json` are never committed to this repository.
+- If you fork this project, restrict your keys to the Android package name and your signing SHA-1 in Google Cloud Console.
+
+## Screenshots
+
+Add screenshots of the home screen, scan screen and result screen here.
 
 ## Author
 
